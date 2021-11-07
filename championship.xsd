@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="championship">
+        <xsd:simpleType>
+            <xsd:restriction base="xsd:integer">
+                <xsd:minExclusive value="0"></xsd:minExclusive>
+                <xsd:maxExclusive value="100"></xsd:maxExclusive>
+            </xsd:restriction>
+        </xsd:simpleType>
+    </xsd:element>
+
+    <xsd:element name="motorTeam">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="motorcycle">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="model">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:minExclusive value="1"></xsd:minExclusive>
+                                        <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="engineCapacity">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:integer">
+                                        <xsd:minExclusive value="0"></xsd:minExclusive>
+                                        <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="rider">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="name">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minExclusive value="1"></xsd:minExclusive>
+                                                    <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="dateOfBirth">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:dateTime">
+                                                    <xsd:minExclusive value="0"></xsd:minExclusive>
+                                                    <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="nationality">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minExclusive value="0"></xsd:minExclusive>
+                                                    <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="challenge">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="tracks">
+                    <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name = "track">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:minExclusive value="1"></xsd:minExclusive>
+                                    <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:sequence>
+        </xsd:complexType>
+        </xsd:element>
+
+
+        </xsd:schema>
