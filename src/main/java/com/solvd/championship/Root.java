@@ -18,6 +18,10 @@ public class Root {
         this.challenge = challenge;
     }
 
+    public Root() {
+
+    }
+
     public List<Track> getTracks() {
         return tracks;
     }
@@ -56,5 +60,16 @@ public class Root {
 
     public void setChallenge(Challenge challenge) {
         this.challenge = challenge;
+    }
+
+    @Override
+    public String toString() {
+        return "Root{" +
+                "tracks=" + tracks +
+                ", motorTeam=" + motorTeam +
+                ", motorcycle=" + motorcycle +
+                ", rider=" + rider +
+                ", challenge=" + challenge +
+                '}';
     }
 }

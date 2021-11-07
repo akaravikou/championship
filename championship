@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<championship> xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="$LOCAL_SCHEMA$"
-              xsi:noNamespaceSchemaLocation="championship.xsd">1
+<root>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="$LOCAL_SCHEMA$"
+    xsi:noNamespaceSchemaLocation="championship.xsd">1
 
+    <motorTeam>
+        <motorcycle>
+            <model>Ducati Panigale S</model>
+            <engineCapacity>1299</engineCapacity>
+        </motorcycle>
+        <rider>
+            <name>Joey Dunlop</name>
+            <dateOfBirth>1952-02-25T00:00:00</dateOfBirth>
+            <nationality>Irishman</nationality>
+        </rider>
+    </motorTeam>
 
+    <challenge>
+        <tracks>
+            <track name="1">Manx GP</track>
+            <track name="2">Isle of Man TT</track>
+            <track name="3">Macau GP</track>
+            <track name="4">NorthWest 200</track>
+            <track name="5">Ulster GP</track>
+        </tracks>
+    </challenge>
 
-<motorTeam>
-<motorcycle>
-    <model>Ducati Panigale S</model>
-    <engineCapacity>1299</engineCapacity>
-</motorcycle>
-<rider>
-    <name>Joey Dunlop</name>
-    <dateOfBirth>1952, 02, 25</dateOfBirth>
-    <nationality>Irishman</nationality>
-</rider>
-</motorTeam>
-
-<challenge>
-<tracks>
-    <track name="Manx GP">1</track>
-    <track name="Isle of Man TT">2</track>
-    <track name="Macau GP">3</track>
-    <track name="NorthWest 200">4</track>
-    <track name="Ulster GP">5</track>
-</tracks>
-</challenge>
-
-</championship>
+</root>
 

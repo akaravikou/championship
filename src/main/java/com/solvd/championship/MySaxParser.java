@@ -32,6 +32,6 @@ public class MySaxParser implements Parserable {
             System.out.println("IO error" + e.toString());
             return null;
         }
-        return null;
+        return handler.getRoot();
     }
 }

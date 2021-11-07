@@ -7,6 +7,6 @@ public class Main {
         MySaxParser parser = new MySaxParser();
         Root root = parser.parse();
 
-        System.out.println(root);
+        System.out.println("Root " + root.toString());
     }
 }

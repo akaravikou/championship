@@ -24,4 +24,12 @@ public class Track {
     public void setLapRecordMinutes(Integer lapRecordMinutes) {
         this.lapRecordMinutes = lapRecordMinutes;
     }
+
+    @Override
+    public String toString() {
+        return "Track{" +
+                "name='" + name + '\'' +
+                ", lapRecordMinutes=" + lapRecordMinutes +
+                '}';
+    }
 }

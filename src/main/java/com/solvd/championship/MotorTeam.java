@@ -20,4 +20,12 @@ public class MotorTeam {
     public void setMotorcycle(Motorcycle motorcycle) {
         this.motorcycle = motorcycle;
     }
+
+    @Override
+    public String toString() {
+        return "MotorTeam{" +
+                "motorcycle=" + motorcycle +
+                ", rider=" + rider +
+                '}';
+    }
 }

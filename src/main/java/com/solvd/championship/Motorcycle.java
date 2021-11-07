@@ -24,4 +24,12 @@ public class Motorcycle {
     public void setEngineCapacity(Integer engineCapacity) {
         this.engineCapacity = engineCapacity;
     }
+
+    @Override
+    public String toString() {
+        return "Motorcycle{" +
+                "model='" + model + '\'' +
+                ", engineCapacity=" + engineCapacity +
+                '}';
+    }
 }
