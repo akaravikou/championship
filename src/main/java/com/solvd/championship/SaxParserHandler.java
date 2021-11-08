@@ -25,7 +25,6 @@ public class SaxParserHandler extends DefaultHandler {
     private Motorcycle motorcycle;
     private Rider rider;
     private Challenge challenge;
-    private String track1;
     private Track track;
     List<Track> tracks = new ArrayList<>();
 
@@ -52,30 +51,28 @@ public class SaxParserHandler extends DefaultHandler {
         currentTagName = qName;
 
         switch (currentTagName) {
-            case TAG_MOTORTEAM -> {
+            case TAG_MOTORTEAM: {
                 motorTeam = new MotorTeam();
                 break;
             }
-            case TAG_MOTORCYCLE -> {
+            case TAG_MOTORCYCLE: {
                 motorcycle = new Motorcycle("new one");
                 break;
             }
-            case TAG_RIDER -> {
+            case TAG_RIDER: {
                 rider = new Rider("Guy Martin");
                 break;
             }
-            case TAG_CHALLENGE -> {
+            case TAG_CHALLENGE: {
                 challenge = new Challenge();
                 break;
             }
-            case TAG_TRACKS -> {
-            }
-            case TAG_TRACK -> {
+            case TAG_TRACK: {
                 track = new Track(attributes.getValue(localName));
                 tracks.add(track);
                 break;
             }
-            default -> {
+            default: {
                 break;
             }
         }
@@ -84,19 +81,26 @@ public class SaxParserHandler extends DefaultHandler {
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         switch (qName) {
-            case TAG_ENGINE -> {
+            case TAG_ENGINE: {
                 root.setMotorcycle(motorcycle);
                 break;
             }
-            case TAG_NATIONALITY -> {
+            case TAG_NATIONALITY: {
                 root.setRider(rider);
                 break;
             }
-            case TAG_TRACKS-> {
-                challenge.setTracks(tracks);
-                root.setTracks(tracks);
+            case TAG_MOTORTEAM: {
+                motorTeam.setMotorcycle(motorcycle);
+                motorTeam.setRider(rider);
+                root.setMotorTeam(motorTeam);
+                break;
             }
-            default -> {
+            case TAG_TRACKS: {
+                challenge.setTracks(tracks);
+                root.setChallenge(challenge);
+                break;
+            }
+            default: {
                 break;
             }
         }
@@ -112,28 +116,28 @@ public class SaxParserHandler extends DefaultHandler {
         }
 
         switch (currentTagName) {
-            case TAG_MODEL -> {
+            case TAG_MODEL: {
                 motorcycle.setModel(text);
                 break;
             }
-            case TAG_ENGINE -> {
+            case TAG_ENGINE: {
                 motorcycle.setEngineCapacity(Integer.valueOf(text));
                 break;
             }
-            case TAG_NAME -> {
+            case TAG_NAME: {
                 rider.setName(text);
                 break;
             }
-            case TAG_BIRTH -> {
+            case TAG_BIRTH: {
                 rider.setDateOfBirth(LocalDateTime.parse(text));
                 break;
             }
-            case TAG_NATIONALITY -> {
+            case TAG_NATIONALITY: {
                 rider.setNationality(text);
                 break;
             }
-            case TAG_TRACK -> {
-                track1 = String.valueOf(text);
+            case TAG_TRACK: {
+                String track1 = text;
                 track.setName(track1);
             }
         }

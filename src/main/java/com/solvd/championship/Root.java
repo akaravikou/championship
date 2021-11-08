@@ -10,16 +10,7 @@ public class Root {
     private Rider rider;
     private Challenge challenge;
 
-    public Root(List<Track> tracks, MotorTeam motorTeam, Motorcycle motorcycle, Rider rider, Challenge challenge) {
-        this.tracks = tracks;
-        this.motorTeam = motorTeam;
-        this.motorcycle = motorcycle;
-        this.rider = rider;
-        this.challenge = challenge;
-    }
-
     public Root() {
-
     }
 
     public List<Track> getTracks() {
@@ -65,7 +56,7 @@ public class Root {
     @Override
     public String toString() {
         return "Root{" +
-                "tracks=" + tracks +
+                ", tracks=" +tracks+
                 ", motorTeam=" + motorTeam +
                 ", motorcycle=" + motorcycle +
                 ", rider=" + rider +

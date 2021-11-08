@@ -22,7 +22,7 @@ public class MySaxParser implements Parserable {
             return null;
         }
 
-        File file = new File("championship");
+        File file = new File("src\\main\\resources\\championship.xml");
         try {
             parser.parse(file, handler);
         } catch (SAXException e) {
