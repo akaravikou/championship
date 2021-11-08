@@ -13,14 +13,6 @@ public class Root {
     public Root() {
     }
 
-    public List<Track> getTracks() {
-        return tracks;
-    }
-
-    public void setTracks(List<Track> tracks) {
-        this.tracks = tracks;
-    }
-
     public MotorTeam getMotorTeam() {
         return motorTeam;
     }
@@ -56,7 +48,6 @@ public class Root {
     @Override
     public String toString() {
         return "Root{" +
-                ", tracks=" +tracks+
                 ", motorTeam=" + motorTeam +
                 ", motorcycle=" + motorcycle +
                 ", rider=" + rider +
