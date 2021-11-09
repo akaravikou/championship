@@ -6,5 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 
 public interface Parserable {
-    public Root parse() throws ParserConfigurationException, SAXException, IOException;
+
+    Root parse() throws ParserConfigurationException, SAXException, IOException;
+
 }
