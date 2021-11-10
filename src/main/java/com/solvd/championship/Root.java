@@ -1,7 +1,10 @@
 package com.solvd.championship;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Root {
 
     private List<Track> tracks;
@@ -11,6 +14,14 @@ public class Root {
     private Challenge challenge;
 
     public Root() {
+    }
+
+    public Root(List<Track> tracks, MotorTeam motorTeam, Motorcycle motorcycle, Rider rider, Challenge challenge) {
+        this.tracks = tracks;
+        this.motorTeam = motorTeam;
+        this.motorcycle = motorcycle;
+        this.rider = rider;
+        this.challenge = challenge;
     }
 
     public MotorTeam getMotorTeam() {

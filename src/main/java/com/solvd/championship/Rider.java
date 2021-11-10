@@ -1,23 +1,34 @@
 package com.solvd.championship;
 
 import java.time.LocalDateTime;
+import javax.xml.bind.annotation.*;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "rider", propOrder = {
+        "riderName",
+        "dateOfBirth",
+        "nationality"
+})
 public class Rider {
 
-    private String name;
+    private String riderName;
     private LocalDateTime dateOfBirth;
     private String nationality;
 
-    public Rider(String name) {
-        this.name = name;
+    public Rider() {
     }
 
-    public String getName() {
-        return name;
+    public Rider(String riderName) {
+        this.riderName = riderName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getRiderName() {
+        return riderName;
+    }
+
+    public void setRiderName(String riderName) {
+        this.riderName = riderName;
     }
 
     public LocalDateTime getDateOfBirth() {
@@ -39,7 +50,7 @@ public class Rider {
     @Override
     public String toString() {
         return "Rider{" +
-                "name='" + name + '\'' +
+                "name='" + riderName + '\'' +
                 ", dateOfBirth=" + dateOfBirth +
                 ", nationality='" + nationality + '\'' +
                 '}';

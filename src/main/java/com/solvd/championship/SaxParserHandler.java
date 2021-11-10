@@ -15,6 +15,7 @@ public class SaxParserHandler extends DefaultHandler {
     private static final String TAG_ENGINE = "engineCapacity";
     private static final String TAG_RIDER = "rider";
     private static final String TAG_NAME = "name";
+    private static final String TAG_RIDERNAME = "riderName";
     private static final String TAG_BIRTH = "dateOfBirth";
     private static final String TAG_NATIONALITY = "nationality";
     private static final String TAG_CHALLENGE = "challenge";
@@ -68,7 +69,7 @@ public class SaxParserHandler extends DefaultHandler {
                 break;
             }
             case TAG_TRACK: {
-                track = new Track(attributes.getValue(localName));
+                track = new Track();
                 tracks.add(track);
                 break;
             }
@@ -124,8 +125,8 @@ public class SaxParserHandler extends DefaultHandler {
                 motorcycle.setEngineCapacity(Integer.valueOf(text));
                 break;
             }
-            case TAG_NAME: {
-                rider.setName(text);
+            case TAG_RIDERNAME: {
+                rider.setRiderName(text);
                 break;
             }
             case TAG_BIRTH: {
@@ -136,7 +137,7 @@ public class SaxParserHandler extends DefaultHandler {
                 rider.setNationality(text);
                 break;
             }
-            case TAG_TRACK: {
+            case TAG_NAME: {
                 String track1 = text;
                 track.setName(track1);
             }

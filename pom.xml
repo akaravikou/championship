@@ -13,6 +13,7 @@
         <log4jVersion>2.14.1</log4jVersion>
         <commonsIoVersion>2.11.0</commonsIoVersion>
         <commonsVersion>3.12.0</commonsVersion>
+        <jaxbVersion>2.3.0</jaxbVersion>
     </properties>
 
     <dependencies>
@@ -35,6 +36,21 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commonsVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>${jaxbVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.0-b170127.1453</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1</version>
         </dependency>
     </dependencies>
 

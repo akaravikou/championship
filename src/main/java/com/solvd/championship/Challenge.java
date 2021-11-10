@@ -1,10 +1,18 @@
 package com.solvd.championship;
 
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Challenge {
 
+    @XmlElementWrapper(name = "tracks")
+    @XmlElement(name = "track")
     private List<Track> tracks;
+
+    public Challenge() {
+    }
 
     public List<Track> getTracks() {
         return tracks;

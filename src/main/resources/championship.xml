@@ -9,7 +9,7 @@
             <engineCapacity>1299</engineCapacity>
         </motorcycle>
         <rider>
-            <name>Joey Dunlop</name>
+            <riderName>Joey Dunlop</riderName>
             <dateOfBirth>1952-02-25T00:00:00</dateOfBirth>
             <nationality>Irishman</nationality>
         </rider>
@@ -17,11 +17,21 @@
 
     <challenge>
         <tracks>
-            <track name="1">Manx GP</track>
-            <track name="2">Isle of Man TT</track>
-            <track name="3">Macau GP</track>
-            <track name="4">NorthWest 200</track>
-            <track name="5">Ulster GP</track>
+            <track name="1">
+                <name>Manx GP</name>
+            </track>
+            <track name="2">
+                <name>Isle of Man TT</name>
+            </track>
+            <track name="3">
+                <name>Macau GP</name>name>
+            </track>
+            <track name="4">
+                <name>NorthWest 200</name>
+            </track>
+            <track name="5">
+                <name>Ulster GP</name>
+            </track>
         </tracks>
     </challenge>
 

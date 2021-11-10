@@ -1,9 +1,20 @@
 package com.solvd.championship;
 
+import javax.xml.bind.annotation.*;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "motorcycle", propOrder = {
+        "model",
+        "engineCapacity"
+})
 public class Motorcycle {
 
     private String model;
     private Integer engineCapacity;
+
+    public Motorcycle() {
+    }
 
     public Motorcycle(String model) {
         this.model = model;
