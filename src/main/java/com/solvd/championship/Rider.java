@@ -1,7 +1,10 @@
 package com.solvd.championship;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
 import java.time.LocalDateTime;
 import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -13,6 +16,9 @@ import javax.xml.bind.annotation.*;
 public class Rider {
 
     private String riderName;
+
+    @XmlJavaTypeAdapter(type=LocalDateTime.class, value= LocalDateTimeXmlAdapter.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime dateOfBirth;
     private String nationality;
 

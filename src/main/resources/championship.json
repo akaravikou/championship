@@ -1,0 +1,31 @@
+{
+  "motorTeam": {
+    "motorcycle": {
+      "model": "Buell 1190RX",
+      "engineCapacity": 1190
+    },
+    "rider": {
+      "riderName": "John McGuinness",
+      "dateOfBirth": "1978-01-01T00:00:00",
+      "nationality": "Englishman"
+    }
+  },
+  "challenge": {
+    "tracks": [{
+      "name": "Manx GP"
+    },
+      {
+        "name": "Isle of man TT"
+      },
+      {
+        "name": "Macau GP"
+      },
+      {
+        "name": "NorthWest 200"
+      },
+      {
+        "name": "Ulster GP"
+      }
+    ]
+  }
+}

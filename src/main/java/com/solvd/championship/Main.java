@@ -1,8 +1,10 @@
 package com.solvd.championship;
 
+import java.io.IOException;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         System.out.println("----------------------------SAX----------------------------");
 
@@ -14,5 +16,10 @@ public class Main {
 
         MyJaxb jaxb = new MyJaxb();
         Root root2 = jaxb.parse();
+
+        System.out.println("---------------------------JackSON--------------------------");
+
+        MyJsonJackson jackson = new MyJsonJackson();
+        Root root3 = jackson.parse();
     }
 }
