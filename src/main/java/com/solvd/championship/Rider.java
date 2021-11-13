@@ -17,7 +17,7 @@ public class Rider {
 
     private String riderName;
 
-    @XmlJavaTypeAdapter(type=LocalDateTime.class, value= LocalDateTimeXmlAdapter.class)
+    @XmlJavaTypeAdapter(type = LocalDateTime.class, value = LocalDateTimeXmlAdapter.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     private LocalDateTime dateOfBirth;
     private String nationality;

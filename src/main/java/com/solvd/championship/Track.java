@@ -5,7 +5,6 @@ import javax.xml.bind.annotation.*;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Track {
 
-@XmlElement(required = true)
     private String name;
 
     public Track() {

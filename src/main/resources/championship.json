@@ -11,9 +11,10 @@
     }
   },
   "challenge": {
-    "tracks": [{
-      "name": "Manx GP"
-    },
+    "tracks": [
+      {
+        "name": "Manx GP"
+      },
       {
         "name": "Isle of man TT"
       },

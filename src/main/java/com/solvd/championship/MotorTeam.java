@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.*;
 })
 public class MotorTeam {
 
-
     private Motorcycle motorcycle;
     private Rider rider;
 

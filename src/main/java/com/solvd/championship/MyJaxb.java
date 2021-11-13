@@ -5,14 +5,14 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
 
-public class MyJaxb implements Parser{
+public class MyJaxb implements Parser {
 
     @Override
     public Root parse() {
 
         File file = new File("src\\main\\resources\\championship.xml");
 
-        try{
+        try {
             JAXBContext context = JAXBContext.newInstance(Root.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
 

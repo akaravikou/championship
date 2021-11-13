@@ -75,21 +75,21 @@
             <xsd:sequence>
                 <xsd:element name="tracks">
                     <xsd:complexType>
-                    <xsd:sequence>
-                        <xsd:element name = "track">
-                            <xsd:simpleType>
-                                <xsd:restriction base="xsd:string">
-                                    <xsd:minExclusive value="1"></xsd:minExclusive>
-                                    <xsd:maxExclusive value="100"></xsd:maxExclusive>
-                                </xsd:restriction>
-                            </xsd:simpleType>
-                        </xsd:element>
+                        <xsd:sequence>
+                            <xsd:element name="track">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:minExclusive value="1"></xsd:minExclusive>
+                                        <xsd:maxExclusive value="100"></xsd:maxExclusive>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-</xsd:sequence>
-        </xsd:complexType>
-        </xsd:element>
 
 
-        </xsd:schema>
+</xsd:schema>
